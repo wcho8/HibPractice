@@ -35,7 +35,7 @@ public class User implements Serializable{
 	}
 	
 	public void setFName(String fName) {
-		FName = fName;
+		this.FName = fName;
 	}
 	
 	public String getLName() {
@@ -43,6 +43,11 @@ public class User implements Serializable{
 	}
 	
 	public void setLName(String lName) {
-		LName = lName;
+		this.LName = lName;
+	}
+	
+	public void printUser(){
+		System.out.println("ID: " + this.id);
+		System.out.println("Name: " + this.FName + " " + this.LName);
 	}
 }
