@@ -50,7 +50,7 @@ public class App {
     
     public static void getUser(int id){
     	EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-    	String qry = "SELECT * FROM User where UserId = :userId";
+    	String qry = "FROM User where UserId = :userId";
     	TypedQuery<User> tq = em.createQuery(qry, User.class);
     	tq.setParameter("userId", id);
     	User user = null;
@@ -67,7 +67,7 @@ public class App {
     
     public static void getAllUser(){
     	EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-    	String qry = "SELECT * FROM USER";
+    	String qry = "FROM User";
     	TypedQuery<User> tq = em.createQuery(qry, User.class);
     	List<User> users = null;
     	
